@@ -42,7 +42,12 @@ int main()
             if (state == IN)
             {
                 state = OUT;
-                ++bar[length];
+
+                if (length < MAXLENGTH)
+                {
+                    ++bar[length];
+                }
+                
                 length = 0;
             }
         }
